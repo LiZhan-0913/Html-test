@@ -1,14 +1,470 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
 <head>
-<title>HTML简介 - 幕布</title>
-<meta charset="utf-8"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="renderer" content="webkit"/>
-<meta name="author" content="mubu.com"/>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>    <meta charset="utf-8"/>
+    <meta name="author" content="order by dede58.com/" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CoolBlue</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/coolblue.css" />
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/scrollToTop.js"></script>
+
 </head>
-<body style="margin: 50px 20px;color: #333;font-family: SourceSansPro,-apple-system,BlinkMacSystemFont,'PingFang SC',Helvetica,Arial,'Microsoft YaHei',微软雅黑,黑体,Heiti,sans-serif,SimSun,宋体,serif">
-<div class="export-wrapper"><div style="font-size: 22px; padding: 0 15px 0;"></div><ul style="list-style: disc outside;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML简介</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">标准开头</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;title&gt;xxx&lt;/title&gt;&lt;/head&gt;​&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">&lt;!DOCTYPE html&gt; 声明为 HTML5 文档</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">&lt;!DOCTYPE&gt;声明有助于浏览器中正确显示网页。网络上有很多不同的文件，如果能够正确声明HTML的版本，浏览器就能正确显示网页内容。doctype 声明是不区分大小写的​</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">在浏览器的页面上使用键盘上的 F12 按键开启调试模式，就可以看到组成标签</span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">什么是HTML?</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">HTML 是用来描述网页的一种语言。HTML 指的是超文本标记语言: HyperText Markup LanguageHTML 不是一种编程语言，而是一种标记语言标记语言是一套标记标签 (markup tag)HTML 使用标记标签来描述网页HTML 文档包含了HTML 标签及文本内容HTML文档也叫做 web 页面</span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML编辑器</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">VS Code： <a class="content-link" target="_blank" href="https://code.visualstudio.com/" style="text-decoration: underline; opacity: 0.6; color: inherit;">https://code.visualstudio.com/</a></span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">Sublime Text： <a class="content-link" target="_blank" href="http://www.sublimetext.com/" style="text-decoration: underline; opacity: 0.6; color: inherit;">http://www.sublimetext.com/</a></span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" color="#333333" style="color: rgb(51, 51, 51); line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML基础——四个实例</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML标题——&lt;h1&gt; - &lt;h6&gt; </span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML段落——&lt;p&gt;</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML链接——&lt;a&gt;</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">&lt;a href="<a class="content-link" target="_blank" href="http://www.runoob.com" style="text-decoration: underline; opacity: 0.6; color: inherit;">http://www.runoob.com</a>"&gt;这是一个链接&lt;/a&gt;</span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML图像——&lt;img&gt;</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">&lt;img src="/images/logo.png" width="258" height="39" /&gt; </span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">注意： 图像的名称和尺寸是以属性的形式提供的。</span></li></ul></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML元素</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML 文档由嵌套的 HTML 元素构成。</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">不要忘记结束标签</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">&lt;br&gt;是没有关闭标签的空元素（&lt;br&gt; 标签定义换行）</span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">使用小写标签</span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML属性</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML属性</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">HTML 元素可以设置属性  属性可以在元素中添加附加信息  属性一般描述于开始标签  属性总是以名称/值对的形式出现，比如：name="value"。</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">属性值应始终被包括在括号内</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">双引号是最常用的，不过使用单引号也没有问题。提示: 在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：name='John "ShotGun" Nelson'</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML提示：使用小写属性</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML属性参考手册 <a class="content-link" target="_blank" href="https://www.runoob.com/tags/html-reference.html" style="text-decoration: underline; opacity: 0.6; color: inherit;">https://www.runoob.com/tags/html-reference.html</a></span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML标题</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML标题：&nbsp;&lt;h1&gt; - &lt;h6&gt;&nbsp;</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">标题很重要</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">请确保将 HTML 标题 标签只用于标题。不要仅仅是为了生成粗体或大号的文本而使用标题。 搜索引擎使用标题为您的网页的结构和内容编制索引。因为用户可以通过标题来快速浏览您的网页，所以用标题来呈现文档结构是很重要的。应该将 h1 用作主标题（最重要的），其后是 h2（次重要的），再其次是 h3，以此类推。</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML水平线：&lt;hr&gt;</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML注释：&lt;!-- --&gt;</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">如何查看源代码</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">你是否看过一些网页然后惊叹它是如何实现的。如果您想找到其中的奥秘，只需要单击右键，然后选择"查看源文件"（IE）或"查看页面源代码"（Firefox），其他浏览器的做法也是类似的。这么做会打开一个包含页面 HTML 代码的窗口。</span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML段落</span><ul class="children" style="list-style: disc outside; padding-bottom: 4px;"><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML段落：&lt;p&gt;</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">注意：浏览器会自动地在段落的前后添加空行。（&lt;/p&gt; 是块级元素）</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">不要忘记结束标签</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML 折行：&lt;br&gt;</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">如果您希望在不产生一个新段落的情况下进行换行（新行），请使用 &lt;br&gt; 标签.&lt;br /&gt; 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此它没有结束标签。​</span></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML输出：使用提醒</span><br><span class="note" style="display: inline-block; color: rgb(136, 136, 136); line-height: 22px; min-height: 22px; font-size: 14px; padding-bottom: 2px;">我们无法确定 HTML 被显示的确切效果。屏幕的大小，以及对窗口的调整都可能导致不同的结果。对于 HTML，您无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果。当显示页面时，浏览器会移除源代码中多余的空格和空行。所有连续的空格或空行都会被算作一个空格。需要注意的是，HTML 代码中的所有连续的空行（换行）也被显示为一个空格。</span></li></ul></li><li style="line-height: 24px;"><span class="content mubu-node" style="line-height: 24px; min-height: 24px; font-size: 16px; padding: 2px 0px; display: inline-block; vertical-align: top;">HTML文本格式化</span></li></ul></div>
+
+<body id="top">
+
+<!--header -->
+<div id="header-wrap"><header>
+
+ 	<hgroup>
+        <h1><a href="index.html">Coolblue</a></h1>
+        <h3>Just Another Styleshout Template</h3>
+    </hgroup>
+
+    <nav>
+		<ul>
+			<li id="current"><a href="index.html">Home</a><span></span></li>
+			<li><a href="style.html">Style Demo</a><span></span></li>
+			<li><a href="blog.html">Blog</a><span></span></li>
+			<li><a href="archive.html">Archives</a><span></span></li>
+			<li><a href="index.html">Support</a><span></span></li>
+			<li><a href="index.html">About</a><span></span></li>
+		</ul>
+	</nav>
+
+    <div class="subscribe">
+        <span>Subscribe:</span> <a href="#">Email</a> | <a href="#">RSS</a>
+    </div>
+
+   <form id="quick-search" method="get" action="index.html">
+      <fieldset class="search">
+         <label for="qsearch">Search:</label>
+         <input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" />
+         <button class="btn" title="Submit Search">Search</button>
+      </fieldset>
+   </form>
+
+<!--/header-->
+</header></div>
+	
+<!-- content-wrap -->
+<div id="content-wrap">
+
+    <!-- content -->
+    <div id="content" class="clearfix">
+
+   	    <!-- main -->
+        <div id="main">
+
+      	    <article class="post">
+
+      		    <div class="primary">
+
+                    <h2><a href="index.html">Read Me First</a></h2>
+
+                    <p class="post-info"><span>filed under</span> <a href="index.html">templates</a>, <a href="index.html">internet</a></p>
+
+               	    <div class="image-section">
+              		    <img src="images/img-post.jpg" alt="image post" height="206" width="498"/>
+         	        </div>
+
+                    <p>CoolBlue is a free website template by <a href="http://www.styleshout.com/">styleshout.com</a>. This work is
+					released and licensed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+					Creative Commons Attribution 3.0 License</a>, which means that you are free to
+					use and modify it for any personal or commercial purpose. All I ask is that you give me credit by including a link back to
+					<a href="http://www.styleshout.com/">my website</a>.
+                    </p>
+
+                    <p>
+                    You can find more of my free template designs at <a href="http://www.styleshout.com/">my website</a>.
+					For premium commercial designs, you can check out <a href="http://themeforest.net?ref=ealigam" title="Site Templates">Themeforest</a>.
+					</p>
+
+                    <p><a class="more" href="index.html">Continue Reading &raquo;</a></p>
+
+                </div>
+
+                <aside>
+
+            	    <p class="dateinfo">JAN<span>31</span></p>
+
+               	    <div class="post-meta">
+                  	    <h4>Post Info</h4>
+                     	<ul>
+                           <li class="user"><a href="#">Erwin</a></li>
+                           <li class="time"><a href="#">12:30 PM</a></li>
+                           <li class="comment"><a href="#">2 Comments</a></li>
+                           <li class="permalink"><a href="#">Permalink</a></li>
+                        </ul>
+					</div>
+
+                </aside>
+
+		    </article>
+
+            <article class="post">
+
+         	    <div class="primary">
+
+            	    <h2><a href="index.html">Lorem Tellus Eleifend Magna</a></h2>
+
+                    <p class="post-info"><span>filed under</span> <a href="index.html">templates</a>, <a href="index.html">internet</a></p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+					Cras id urna. Morbi tincidunt, orci ac <a href="index.html">convallis aliquam</a>, lectus turpis varius lorem, eu
+				    posuere nunc justo tempus leo.</p>
+
+				    <p>
+				    Donec mattis, purus nec placerat bibendum, <a href="index.html">dui pede condimentum</a>
+				    odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra
+				    condimentum, lorem tellus eleifend magna, <a href="index.html">eget fringilla velit</a> magna id neque. Curabitur vel urna.
+				    In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+				    Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu
+				    posuere nunc justo tempus leo.</p>
+
+                    <p><a class="more" href="index.html">continue reading &raquo;</a></p>
+
+                </div>
+
+                <aside>
+
+            	    <p class="dateinfo">JAN<span>29</span></p>
+
+                    <div class="post-meta">
+               	        <h4>Post Info</h4>
+                  	    <ul>
+                     	    <li class="user"><a href="#">Erwin</a></li>
+                            <li class="time"><a href="#">10:30 PM</a></li>
+                            <li class="comment"><a href="#">5 comments</a></li>
+                            <li class="permalink"><a href="#">Permalink</a></li>
+                        </ul>
+					</div>
+
+                </aside>
+
+		    </article>
+
+            <article class="post">
+
+         	    <div class="primary">
+
+                    <h2><a href="index.html">Lorem Ipsum Dolor Sit Amet</a></h2>
+
+                    <p class="post-info"><span>Filed under</span> <a href="index.html">templates</a>, <a href="index.html">internet</a></p>
+
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+					Cras id urna. Morbi tincidunt, orci ac <a href="index.html">convallis aliquam</a>, lectus turpis varius lorem, eu
+				    posuere nunc justo tempus leo.</p>
+
+				    <p>
+				    Donec mattis, purus nec placerat bibendum, <a href="index.html">dui pede condimentum</a>
+				    odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra
+				    condimentum, lorem tellus eleifend magna, <a href="index.html">eget fringilla velit</a> magna id neque. Curabitur vel urna.
+				    In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.
+				    Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu
+				    posuere nunc justo tempus leo.</p>
+
+                    <p><a class="more" href="index.html">continue reading &raquo;</a></p>
+
+                </div>
+
+                <aside>
+
+            	    <p class="dateinfo">JAN<span>25</span></p>
+
+                    <div class="post-meta">
+               	        <h4>Post Info</h4>
+                  	    <ul>
+                     	    <li class="user"><a href="#">Erwin</a></li>
+                            <li class="time"><a href="#">11:30 AM</a></li>
+                            <li class="comment"><a href="#">7 comments</a></li>
+                            <li class="permalink"><a href="#">Permalink</a></li>
+                        </ul>
+					</div>
+
+                </aside>
+
+		    </article>
+
+        <!-- /main -->
+        </div>
+
+        <!-- sidebar -->
+		<div id="sidebar">
+
+      	    <div class="about-me">
+
+         	    <h3>About Me</h3>
+
+                <p>
+		        <a href="index.html"><img src="images/gravatar.jpg" width="42" height="42" alt="firefox" class="align-left" /></a>
+                Lorem ipsum dolor sit, consectetuer adipiscing. Donec libero. Suspendisse bibendum.
+			    Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu
+			    posuere nunc justo tempus leo suspendisse bibendum. <a href="index.html">Learn more...</a>
+			    </p>
+
+            </div>
+
+			<div class="sidemenu">
+
+				<h3>Sidebar Menu</h3>
+                <ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#TemplateInfo">TemplateInfo</a></li>
+					<li><a href="style.html">Style Demo</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="archives.html">Archives</a></li>
+					<li><a href="http://themeforest.net?ref=ealigam" title="Web Templates">Web Templates</a></li>
+				</ul>
+
+			</div>
+
+			<div class="sidemenu">
+
+				<h3>Sponsors</h3>
+
+                <ul>
+			        <li><a href="http://themeforest.net?ref=ealigam" title="Site Templates">Themeforest
+	            	<span>Site Templates, Web &amp; CMS Themes.</span></a>
+	                </li>
+					<li><a href="http://www.4templates.com/?go=228858961" title="Website Templates">4Templates
+	            	<span>Low Cost High-Quality Templates.</span></a>
+	                </li>
+					<li><a href="http://store.templatemonster.com?aff=ealigam" title="Web Templates">Templatemonster
+	            	<span>Delivering the Best Templates on the Net!</span></a>
+	                </li>
+					<li><a href="http://graphicriver.net?ref=ealigam" title="Stock Graphics">Graphic River
+	            	<span>Awesome Stock Graphics.</span></a>
+	                </li>
+                    <li><a href="http://www.dreamhost.com/r.cgi?287326|sshout" title="Webhosting">Dreamhost
+	            	<span>Premium Webhosting. Use the promocode <strong>sshout</strong> and save <strong>50 USD</strong>.</span></a>
+	                </li>
+				</ul>
+
+			</div>
+
+            <div class="sidemenu popular">
+
+				<h3>Most Popular</h3>
+				<ul>
+			   	<li><a href="index.html">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+						<span>Posted on December 22, 2010</span></a>
+					</li>
+                <li><a href="index.html">Cras fringilla magna. Phasellus suscipit.
+						<span>Posted on December 20, 2010</span></a>
+					</li>
+                <li><a href="index.html">Morbi tincidunt, orci ac convallis aliquam.
+						<span>Posted on December 15, 2010</span></a>
+					</li>
+                <li><a href="index.html">Ipsum dolor sit amet, consectetuer adipiscing elit.
+						<span>Posted on December 14, 2010</span></a>
+					</li>
+                <li><a href="index.html">Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem
+						<span>Posted on December 12, 2010</span></a>
+					</li>
+				</ul>
+
+			</div>
+
+        <!-- /sidebar -->
+		</div>
+
+    <!-- content -->
+	</div>
+
+<!-- /content-out -->
+</div>
+		
+<!-- extra -->
+<div id="extra-wrap"><div id="extra" class="clearfix">
+
+	    <div id="gallery" class="clearfix">
+
+		    <h3>Flickr Photos </h3>
+
+		    <p class="thumbs">
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+            <a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+			<a href="index.html"><img src="images/thumb.png" width="42" height="43" alt="thumbnail" /></a>
+            </p>
+
+        </div>
+
+	    <div class="col first">
+
+		    <h3>Contact Info</h3>
+
+		    <p>
+		    <strong>Phone: </strong>+1234567<br/>
+		    <strong>Fax: </strong>+123456789
+		    </p>
+
+		    <p><strong>Address: </strong>123 Put Your Address Here</p>
+            <p><strong>E-mail: </strong>me@coolblue.com</p>
+		    <p>Want more info - go to our <a href="#">contact page</a></p>
+
+            <h3>Updates</h3>
+
+            <ul class="subscribe-stuff">
+      	        <li><a title="RSS" href="index.html" rel="nofollow">
+				<img alt="RSS" title="RSS" src="images/social_rss.png" /></a>
+			    </li>
+      	        <li><a title="Facebook" href="index.html" rel="nofollow">
+				<img alt="Facebook" title="Facebook" src="images/social_facebook.png" /></a>
+			    </li>
+			    <li><a title="Twitter" href="index.html" rel="nofollow">
+				<img alt="Twitter" title="Twitter" src="images/social_twitter.png" /></a>
+			    </li>
+			    <li><a title="E-mail this story to a friend!" href="index.html" rel="nofollow">
+				<img alt="E-mail this story to a friend!" title="E-mail this story to a friend!" src="images/social_email.png" /></a>
+			    </li>
+            </ul>
+
+            <p>Stay up to date. Subscribe via
+		    <a href="index">RSS</a>, <a href="index">Facebook</a>,
+		    <a href="index">Twitter</a> or <a href="index">Email</a>
+		    </p>
+
+	    </div>
+
+	    <div class="col">
+
+   	        <h3>Site Links</h3>
+
+		    <div class="footer-list">
+			    <ul>
+				    <li><a href="index.html">Home</a></li>
+				    <li><a href="index.html">Style Demo</a></li>
+				    <li><a href="index.html">Blog</a></li>
+				    <li><a href="index.html">Archive</a></li>
+				    <li><a href="index.html">About</a></li>
+				    <li><a href="index.html">Template Info</a></li>
+				    <li><a href="index.html">Site Map</a></li>
+			    </ul>
+		    </div>
+
+            <h3>Friends</h3>
+
+		    <div class="footer-list">
+			    <ul>
+				    <li><a href="index.html">consequat molestie</a></li>
+				    <li><a href="index.html">sem justo</a></li>
+				    <li><a href="index.html">semper</a></li>
+				    <li><a href="index.html">magna sed purus</a></li>
+				    <li><a href="index.html">tincidunt</a></li>
+				    <li><a href="index.html">consequat molestie</a></li>
+				    <li><a href="index.html">magna sed purus</a></li>
+			    </ul>
+		    </div>
+
+	    </div>
+
+        <div class="col">
+
+            <h3>Credits</h3>
+
+            <div class="footer-list">
+			    <ul>
+				    <li><a href="http://jasonlarose.com/blog/110-free-classy-social-media-icons">
+						110 Free Classy Social Media Icons by Jason LaRose
+				    </a>
+				    </li>
+                    <li><a href="http://wefunction.com/2009/05/free-social-icons-app-icons/">
+						Free Social Media Icons by WeFunction
+				    </a>
+				    </li>
+                    <li><a href="http://iconsweets2.com/">
+						Free Icons by Yummygum
+				    </a>
+				    </li>
+			    </ul>
+		    </div>
+
+            <h3>Recent Comments</h3>
+
+	        <div class="recent-comments">
+                <ul>
+			        <li><a href="index.html" title="Comment on title">Whoa! This one is really cool...</a><br /> &#45; <cite>Erwin</cite></li>
+			        <li><a href="index.html" title="Comment on title">Wow. This theme is really awesome...</a><br /> &#45; <cite>John Doe</cite></li>
+			        <li><a href="index.html" title="Comment on title">Type your comment here...</a><br />&#45; <cite>Naruto</cite></li>
+			        <li><a href="index.html" title="Comment on title">And don't forget this theme is free...</a><br /> &#45; <cite>Shikamaru</cite></li>
+                    <li><a href="index.html" title="Comment on title">Just a simple reply test. Thanks...</a><br /> &#45; <cite>ABCD</cite></li>
+			    </ul>
+		    </div>
+
+        </div>
+
+        <div class="col">
+
+            <h3>Archives</h3>
+
+	        <div class="footer-list">
+			    <ul>
+				    <li><a href="index.html">January 2010</a></li>
+				    <li><a href="index.html">December 2009</a></li>
+				    <li><a href="index.html">November 2009</a></li>
+				    <li><a href="index.html">October 2009</a></li>
+				    <li><a href="index.html">September 2009</a></li>
+			    </ul>
+		    </div>
+
+            <h3>Recent Bookmarks</h3>
+
+	        <div class="footer-list">
+			    <ul>
+				    <li><a href="index.html">5 Must Have Sans Serif Fonts for Web Designers</a></li>
+				    <li><a href="index.html">The Basics of CSS3</a></li>
+				    <li><a href="index.html">10 Simple Tips for Launching a Website</a></li>
+				    <li><a href="index.html">24 ways: Working With RGBA Colour</a></li>
+				    <li><a href="index.html">30 Blog Designs with Killer Typography</a></li>
+				    <li><a href="index.html">The Principles of Great Design</a></li>
+			    </ul>
+		    </div>
+
+	    </div>
+
+<!-- /extra -->
+</div></div>
+
+<!-- footer -->
+<footer>
+
+	<p class="footer-left">
+		&copy; 2011 Copyright Info &nbsp; &nbsp; &nbsp;
+		Design by <a href="http://www.styleshout.com/">styleshout</a>
+	</p>
+
+	<p class="footer-right">
+	   	<a href="index.html">Home</a> |
+		<a href="index.html">Sitemap</a> |
+		<a href="index.html">RSS Feed</a> |
+        <a href="#top" class="back-to-top">Back to Top</a>
+    </p>
+
+<!-- /footer -->
+</footer>
 
 </body>
 </html>
